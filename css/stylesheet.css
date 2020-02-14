@@ -68,8 +68,8 @@ header {
 }
 
 .top img {
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     margin: 15px;
     float: right;
 }
@@ -108,4 +108,40 @@ header {
     float: right;
     width: 33%;
     height: 100%;
+}
+
+.tabel-PD {
+    margin-left: 20px;
+}
+
+.match-PD {
+    margin-left: 800px;
+}
+
+.scor-PD {
+    margin-left: 1200px;
+}
+
+.tabel-PL {
+    margin-left: 20px;
+}
+
+.match-PL {
+    margin-left: 800px;
+}
+
+.scor-PL {
+    margin-left: 1200px;
+}
+
+.nav-link-PD:hover {
+    background-color: mediumpurple;
+    transition: 1.5s ease;
+    border-radius: 20%;
+}
+
+.nav-link-PL:hover {
+    background-color: aqua;
+    transition: 1.5s ease;
+    border-radius: 20%;
 }

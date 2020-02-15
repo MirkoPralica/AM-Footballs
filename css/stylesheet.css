@@ -9,24 +9,25 @@ html {
 }
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/Football.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../Images/Football.jpg");
     height: 100vh;
     background-size: cover;
     background-position: center;
 }
 
 .section1 {
-    background-image: url("../Images/LL.jpg");
     height: 100vh;
-    background-size: cover;
+    width: 100%;
     background-position: center;
+    background-color: rgb(163, 195, 226);
+    position: relative;
+    text-align: center !important;
 }
 
 .section2 {
-    background-image: url("../Images/PL.jpg");
     height: 100vh;
-    background-size: cover;
     background-position: center;
+    background-color: rgb(104, 248, 236);
 }
 
 .section3 {
@@ -41,7 +42,7 @@ header {
 
 .navigator a {
     text-decoration: none;
-    font-size: 32px;
+    font-size: 25px;
     color: white;
     padding: 7px 15px;
     border: white solid 1px transparent;
@@ -50,6 +51,7 @@ header {
 }
 
 .navigator a:hover {
+    text-decoration: none;
     color: black;
     background-color: white;
     transition: 1.5s ease;
@@ -57,7 +59,7 @@ header {
 
 .logo img {
     float: left;
-    width: 300px;
+    width: 250px;
     height: auto;
     margin-top: 20px;
 }
@@ -68,8 +70,8 @@ header {
 }
 
 .top img {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     margin: 15px;
     float: right;
 }
@@ -84,68 +86,41 @@ header {
 
 .container {
     width: 100%;
-    text-align: center;
-    height: 80%;
+    max-width: 100% !important;
+    height: 85%;
     position: absolute;
     bottom: 0px;
     left: 0px;
+    display: table-cell;
+    text-align: center !important;
 }
 
-.left {
-    float: left;
-    width: 33%;
-    height: 100%;
+.w-100 {
+    width: 100% !important;
+    height: 70vh;
 }
 
-.center {
-    width: 33%;
-    height: 100%;
+.mycarousel {
+    display: inline-block;
+    border: solid 10px;
+    margin-top: 65px;
+    padding: 0px;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.col-md-8 {
+    padding: 0px !important;
+}
+
+.spain-details {
+    width: 90%;
+    height: 90vh;
     margin: 0 auto;
     display: inline-block;
 }
 
-.right {
-    float: right;
-    width: 33%;
-    height: 100%;
-}
-
-.tabel-PD {
-    margin-left: 20px;
-}
-
-.match-PD {
-    margin-left: 300px;
-}
-
-.scor-PD {
-    margin-left: 400px;
-}
-
-.tabel-PL {
-    margin-left: 20px;
-}
-
-.match-PL {
-    margin-left: 300px;
-}
-
-.scor-PL {
-    margin-left: 400px;
-}
-
-.nav-link-PD {
-    
-}
-
-.nav-link-PD:hover {
-    background-color: mediumpurple;
-    transition: 1.5s ease;
-    border-radius: 20%;
-}
-
-.nav-link-PL:hover {
-    background-color: aqua;
-    transition: 1.5s ease;
-    border-radius: 20%;
+.table {
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
 }

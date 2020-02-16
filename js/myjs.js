@@ -1,5 +1,4 @@
     function callAPIs() {
-        console.log("Ahmad before Fetch..")
         const url = "http://api.football-data.org/v2/competitions/2014/standings";
         fetch(url, {
                 method: "GET",
@@ -11,16 +10,35 @@
                 return resp.json();
             })
             .then(function(data) {
+
+                var firstyear = (data.season.startDate).substring(0, 4);
+                var secondyear = parseInt(firstyear) + 1;
+                var season = firstyear + "-" + secondyear.toString();
+
                 let output = "";
-                output += `<p>Started on ${data.season.startDate}, ending on ${data.season.endDate}</p>`;
+                output += `<p>Season ${season}, Started on ${data.season.startDate}, ending on ${data.season.endDate}</p>`;
+                document.getElementById("title-spain").innerHTML = output;
 
                 let myTable = "";
-                myTable = '<table class="table table-striped table-sm" " style="margin-top:20px; "><thead class="thead-dark "><tr><th scope="col ">#</th><th scope="col ">Team</th><th scope="col ">Played</th><th scope="col ">Win</th><th scope="col ">Draw</th><th scope="col ">Loss</th><th scope="col ">Remaining</th><th scope="col ">Goals F</th><th scope="col ">Goals A</th><th scope="col ">Goals Diff</th><th scope="col ">Points</th></tr></thead><tbody>'
+                myTable = `<table class="table table-striped table-sm" " style="margin-top:20px; ">
+                           <thead class="thead-dark ">
+                           <tr>
+                           <th scope="col ">#</th>
+                           <th scope="col ">Team</th>
+                           <th scope="col ">Played</th><th scope="col ">Win</th>
+                           <th scope="col ">Draw</th>
+                           <th scope="col ">Loss</th>
+                           <th scope="col ">Remaining</th>
+                           <th scope="col ">Goals F</th>
+                           <th scope="col ">Goals A</th>
+                           <th scope="col ">Goals Diff</th>
+                           <th scope="col ">Points</th>
+                           </tr></thead><tbody>`
 
                 for (let i = 0; i < data.standings[0].table.length; i++) {
                     myTable += `<tr>`;
                     myTable += `<td> ${ data.standings[0].table[i].position } </td>`;
-                    myTable += `<td style="font-weight: bold"> ${ data.standings[0].table[i].team.name } </td>`;
+                    myTable += `<td class="teamName-Spain"> ${ data.standings[0].table[i].team.name } </td>`;
                     myTable += `<td> ${ data.standings[0].table[i].playedGames } </td>`;
                     myTable += `<td> ${ data.standings[0].table[i].won } </td>`;
                     myTable += `<td> ${ data.standings[0].table[i].draw } </td>`;

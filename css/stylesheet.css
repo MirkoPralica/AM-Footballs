@@ -124,3 +124,12 @@ header {
     text-align: center;
     width: 100%;
 }
+
+.teamName-Spain {
+    font-weight: bold
+}
+
+#title-spain {
+    padding-top: 15px;
+    margin-right: 50px;
+}

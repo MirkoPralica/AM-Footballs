@@ -1,3 +1,20 @@
+    function insertTable(table, cls, myTable) {
+        myTable += `<tr>`;
+        myTable += `<td ${cls}> ${ table.position } </td>`;
+        myTable += `<td ${cls}> ${ table.team.name } </td>`;
+        myTable += `<td ${cls}> ${ table.playedGames } </td>`;
+        myTable += `<td ${cls}> ${ table.won } </td>`;
+        myTable += `<td ${cls}> ${ table.draw } </td>`;
+        myTable += `<td ${cls}> ${ table.lost } </td>`;
+        myTable += `<td ${cls}> ${ 38 - table.playedGames } </td>`;
+        myTable += `<td ${cls}> ${ table.goalsFor } </td>`;
+        myTable += `<td ${cls}> ${ table.goalsAgainst } </td>`;
+        myTable += `<td ${cls}> ${ table.goalDifference } </td>`;
+        myTable += `<td ${cls}> ${ table.points } </td>`;
+        myTable += `<tr>`;
+        return myTable;
+    }
+
     function callAPIs() {
         const url = "http://api.football-data.org/v2/competitions/2014/standings";
         fetch(url, {
@@ -11,16 +28,18 @@
             })
             .then(function(data) {
 
-                var firstyear = (data.season.startDate).substring(0, 4);
-                var secondyear = parseInt(firstyear) + 1;
-                var season = firstyear + "-" + secondyear.toString();
+                let firstyear = (data.season.startDate).substring(0, 4);
+                let secondyear = parseInt(firstyear) + 1;
+                let season = firstyear + "-" + secondyear.toString();
 
                 let output = "";
-                output += `<p>Season ${season}, Started on ${data.season.startDate}, ending on ${data.season.endDate}</p>`;
+                output += `<p>Season ${season}, Started on ${data.season.startDate}, 
+                            ending on ${data.season.endDate}</p>`;
+
                 document.getElementById("title-spain").innerHTML = output;
 
                 let myTable = "";
-                myTable = `<table class="table table-striped table-sm" " style="margin-top:20px; ">
+                myTable = `<table class="table table-striped table-sm" " style="margin-top:20px;">
                            <thead class="thead-dark ">
                            <tr>
                            <th scope="col ">#</th>
@@ -35,27 +54,32 @@
                            <th scope="col ">Points</th>
                            </tr></thead><tbody>`
 
+
                 for (let i = 0; i < data.standings[0].table.length; i++) {
-                    myTable += `<tr>`;
-                    myTable += `<td> ${ data.standings[0].table[i].position } </td>`;
-                    myTable += `<td class="teamName-Spain"> ${ data.standings[0].table[i].team.name } </td>`;
-                    myTable += `<td> ${ data.standings[0].table[i].playedGames } </td>`;
-                    myTable += `<td> ${ data.standings[0].table[i].won } </td>`;
-                    myTable += `<td> ${ data.standings[0].table[i].draw } </td>`;
-                    myTable += `<td> ${ data.standings[0].table[i].lost } </td>`;
-                    myTable += `<td> ${ 38 - data.standings[0].table[i].playedGames } </td>`;
-                    myTable += `<td> ${ data.standings[0].table[i].goalsFor } </td>`;
-                    myTable += `<td> ${ data.standings[0].table[i].goalsAgainst } </td>`;
-                    myTable += `<td> ${ data.standings[0].table[i].goalDifference } </td>`;
-                    myTable += `<td> ${ data.standings[0].table[i].points } </td>`;
-                    myTable += `<tr>`;
+                    if (i < 4) {
+                        myTable = insertTable(data.standings[0].table[i], 'class="green"', myTable);
+                    } else if (i >= data.standings[0].table.length - 4) {
+                        myTable = insertTable(data.standings[0].table[i], 'class="red"', myTable);
+                    } else {
+                        myTable = insertTable(data.standings[0].table[i], '', myTable);
+                    }
                 }
 
                 myTable += '</tr></tbody></table>';
 
                 document.getElementById("spain-division").innerHTML = myTable;
+
+                let boxdivs = "";
+                boxdivs = `<div class="" " style="margin-top:20px;">
+                           <div style="width:25px"></div>`
+
             })
             .catch(function(error) {
                 console.log(error);
             });
+    }
+
+    function clearDiv() {
+        document.getElementById("spain-division").innerHTML = "";
+        document.getElementById("title-spain").innerHTML = "";
     }

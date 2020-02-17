@@ -19,7 +19,7 @@ header {
     height: 100vh;
     width: 100%;
     background-position: center;
-    background-color: rgb(163, 195, 226);
+    background-color: rgb(212, 230, 248);
     position: relative;
     text-align: center !important;
 }
@@ -120,7 +120,7 @@ header {
 }
 
 .table {
-    font-size: 14px;
+    font-size: 13.5px;
     text-align: center;
     width: 100%;
 }
@@ -131,5 +131,14 @@ header {
 
 #title-spain {
     padding-top: 15px;
-    margin-right: 50px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.green {
+    background-color: rgb(1, 155, 1, 0.2);
+}
+
+.red {
+    background-color: rgb(252, 15, 15, 0.2);
 }

@@ -15,7 +15,7 @@
         return myTable;
     }
 
-    function callAPIs() {
+    function tableAPIs() {
         const url = "http://api.football-data.org/v2/competitions/2014/standings";
         fetch(url, {
                 method: "GET",
@@ -82,4 +82,62 @@
     function clearDiv() {
         document.getElementById("spain-division").innerHTML = "";
         document.getElementById("title-spain").innerHTML = "";
+    }
+
+    function ScoreAPIs() {
+        const url = "https://api.football-data.org/v2/competitions/PD/scorers";
+        fetch(url, {
+                method: "GET",
+                headers: {
+                    "X-Auth-Token": "d38ac557ec364cf79e21a985e5d1cf8c",
+                }
+            })
+            .then(resp => {
+                return resp.json();
+            })
+            .then(function(data) {
+
+                let firstyear = (data.season.startDate).substring(0, 4);
+                let secondyear = parseInt(firstyear) + 1;
+                let season = firstyear + "-" + secondyear.toString();
+
+                let output = "";
+                output += `<p>Season ${season}, Started on ${data.season.startDate}, 
+                            ending on ${data.season.endDate}</p>`;
+
+                document.getElementById("title-spain").innerHTML = output;
+
+                let scoreTable = "";
+                scoreTable = `<table class="table table-striped table-sm" " style="margin-top:20px;">
+                           <thead class="thead-dark ">
+                           <tr>
+                           <th scope="col ">#</th>
+                           <th scope="col ">Name</th>
+                           <th scope="col ">Goals</th>
+                           <th scope="col ">Team</th>
+                           </tr></thead><tbody>`
+                            let x = 1;
+                           for (let i = 0; i < data.scorers.length; i++) {
+                            scoreTable += `<tr>`;
+                            scoreTable += `<td > ${ x } </td>`;
+                                 scoreTable += `<td > ${ data.scorers[i].player.name } </td>`;
+                                 scoreTable += `<td > ${ data.scorers[i].numberOfGoals } </td>`;
+                                 scoreTable += `<td > ${ data.scorers[i].team.name } </td>`;
+                                 scoreTable += `<tr>`;
+                                 x++;
+                        }
+
+
+                scoreTable += '</tr></tbody></table>';
+
+                document.getElementById("spain-division").innerHTML = scoreTable;
+
+                let boxdivs = "";
+                boxdivs = `<div class="" " style="margin-top:20px;">
+                           <div style="width:25px"></div>`
+
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
     }

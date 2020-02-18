@@ -141,3 +141,27 @@
                 console.log(error);
             });
     }
+
+
+    function insertMatches() {
+        var teamsID = [];
+        const url = "http://api.football-data.org/v2/competitions/2014/teams";
+        fetch(url, {
+                method: "GET",
+                headers: {
+                    "X-Auth-Token": "d38ac557ec364cf79e21a985e5d1cf8c",
+                }
+            })
+            .then(resp => {
+                return resp.json();
+            })
+            .then(function(data) {
+
+                for(let i=0 ; i > data.teams.length; i++){
+                    //console.log(data.teams[i].id);
+                    teamsID.push(data.teams[i].id);
+                }
+            })
+            console.log(teamsID[1]);
+        
+    }

@@ -1,7 +1,7 @@
     function insertTable(table, cls, myTable) {
         myTable += `<tr>`;
         myTable += `<td ${cls}> ${ table.position } </td>`;
-        myTable += `<td ${cls}> <a href="${ table.team.crestUrl }"> ${ table.team.name }</td>`;
+        myTable += `<td ${cls}> ${ table.team.name } </td>`;
         myTable += `<td ${cls}> ${ table.playedGames } </td>`;
         myTable += `<td ${cls}> ${ table.won } </td>`;
         myTable += `<td ${cls}> ${ table.draw } </td>`;
@@ -54,6 +54,7 @@
                            <th scope="col ">Points</th>
                            </tr></thead><tbody>`
 
+
                 for (let i = 0; i < data.standings[0].table.length; i++) {
                     if (i < 4) {
                         myTable = insertTable(data.standings[0].table[i], 'class="green"', myTable);
@@ -68,6 +69,7 @@
 
                 document.getElementById("spain-division").innerHTML = myTable;
 
+                let boxdivs = "";
                 boxdivs = `<div class="" " style="margin-top:20px;">
                            <div style="width:25px"></div>`
 
@@ -193,8 +195,9 @@
 
                 document.getElementById("england-division").innerHTML = myTable;
 
+                let boxdivs = "";
                 boxdivs = `<div class="" " style="margin-top:20px;">
-                               <div style="width:25px"></div>`
+                           <div style="width:25px"></div>`
 
             })
             .catch(function(error) {
@@ -202,6 +205,10 @@
             });
     }
 
+    function clearDiv() {
+        document.getElementById("england-division").innerHTML = "";
+        document.getElementById("title-england").innerHTML = "";
+    }
 
     function ScoreAPIsPL() {
         const url = "https://api.football-data.org/v2/competitions/PL/scorers";
@@ -215,7 +222,6 @@
                 return resp.json();
             })
             .then(function(data) {
-
 
                 let firstyear = (data.season.startDate).substring(0, 4);
                 let secondyear = parseInt(firstyear) + 1;
@@ -261,18 +267,20 @@
                 console.log(error);
             });
     }
+    
 
-
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         var checkbox = document.querySelector('input[type="checkbox"]');
-
-        checkbox.addEventListener('change', function() {
-            if (checkbox.checked) {
-                document.getElementById("About").classList.remove("section3-light");
-                document.getElementById("About").classList.add("section3-dark");
+      
+        checkbox.addEventListener('change', function () {
+          if (checkbox.checked) {
+              document.getElementById("About").classList.remove("section3-light");
+              document.getElementById("About").classList.add("section3-dark");
             } else {
                 document.getElementById("About").classList.remove("section3-dark");
                 document.getElementById("About").classList.add("section3-light");
-            }
+          }
         });
-    });
+      });
+
+

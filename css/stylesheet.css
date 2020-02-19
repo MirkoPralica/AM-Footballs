@@ -21,6 +21,8 @@ html {
     height: 100vh;
     background-position: center;
     background-color: rgb(104, 248, 236);
+    position: relative;
+    text-align: center !important;
 }
 
 #About {
@@ -95,6 +97,13 @@ html {
     display: inline-block;
 }
 
+.england-details {
+    width: 90%;
+    height: 90vh;
+    margin: 0 auto;
+    display: inline-block;
+}
+
 .table {
     font-size: 13.5px;
     text-align: center;
@@ -106,6 +115,12 @@ html {
 }
 
 #title-spain {
+    padding-top: 15px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+#title-england {
     padding-top: 15px;
     margin-right: 10px;
     font-size: 18px;

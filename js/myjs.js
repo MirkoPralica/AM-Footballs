@@ -142,10 +142,8 @@
             });
     }
 
-
-    function insertMatches() {
-        var teamsID = [];
-        const url = "http://api.football-data.org/v2/competitions/2014/teams";
+    function tableAPIsPL() {
+        const url = "http://api.football-data.org/v2/competitions/2021/standings";
         fetch(url, {
                 method: "GET",
                 headers: {
@@ -157,14 +155,62 @@
             })
             .then(function(data) {
 
-                for (let i = 0; i > data.teams.length; i++) {
-                    //console.log(data.teams[i].id);
-                    teamsID.push(data.teams[i].id);
+                let firstyear = (data.season.startDate).substring(0, 4);
+                let secondyear = parseInt(firstyear) + 1;
+                let season = firstyear + "-" + secondyear.toString();
+
+                let output = "";
+                output += `<p>Season ${season}, Started on ${data.season.startDate}, 
+                            ending on ${data.season.endDate}</p>`;
+
+                document.getElementById("title-england").innerHTML = output;
+
+                let myTable = "";
+                myTable = `<table class="table table-striped table-sm" " style="margin-top:20px;">
+                           <thead class="thead-dark ">
+                           <tr>
+                           <th scope="col ">#</th>
+                           <th scope="col ">Team</th>
+                           <th scope="col ">Played</th><th scope="col ">Win</th>
+                           <th scope="col ">Draw</th>
+                           <th scope="col ">Loss</th>
+                           <th scope="col ">Remaining</th>
+                           <th scope="col ">Goals F</th>
+                           <th scope="col ">Goals A</th>
+                           <th scope="col ">Goals Diff</th>
+                           <th scope="col ">Points</th>
+                           </tr></thead><tbody>`
+
+
+                for (let i = 0; i < data.standings[0].table.length; i++) {
+                    if (i < 4) {
+                        myTable = insertTable(data.standings[0].table[i], 'class="green"', myTable);
+                    } else if (i >= data.standings[0].table.length - 4) {
+                        myTable = insertTable(data.standings[0].table[i], 'class="red"', myTable);
+                    } else {
+                        myTable = insertTable(data.standings[0].table[i], '', myTable);
+                    }
                 }
+
+                myTable += '</tr></tbody></table>';
+
+                document.getElementById("england-division").innerHTML = myTable;
+
+                let boxdivs = "";
+                boxdivs = `<div class="" " style="margin-top:20px;">
+                           <div style="width:25px"></div>`
+
             })
-            console.log(teamsID[1]);
-        
+            .catch(function(error) {
+                console.log(error);
+            });
     }
+
+    function clearDiv() {
+        document.getElementById("england-division").innerHTML = "";
+        document.getElementById("title-england").innerHTML = "";
+    }
+    
 
     document.addEventListener('DOMContentLoaded', function () {
         var checkbox = document.querySelector('input[type="checkbox"]');

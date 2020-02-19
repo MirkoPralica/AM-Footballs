@@ -162,7 +162,6 @@
                     teamsID.push(data.teams[i].id);
                 }
             })
-<<<<<<< HEAD
             console.log(teamsID[1]);
         
     }
@@ -180,8 +179,4 @@
           }
         });
       });
-=======
-        console.log(teamsID[1]);
 
-    }
->>>>>>> cc51c807870c2e82b22474bdc3346de2f3481c4f

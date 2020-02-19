@@ -184,9 +184,9 @@
 
                 for (let i = 0; i < data.standings[0].table.length; i++) {
                     if (i < 4) {
-                        myTable = insertTable(data.standings[0].table[i], 'class="green"', myTable);
+                        myTable = insertTable(data.standings[0].table[i], 'class="PLgreen"', myTable);
                     } else if (i >= data.standings[0].table.length - 4) {
-                        myTable = insertTable(data.standings[0].table[i], 'class="red"', myTable);
+                        myTable = insertTable(data.standings[0].table[i], 'class="PLred"', myTable);
                     } else {
                         myTable = insertTable(data.standings[0].table[i], '', myTable);
                     }

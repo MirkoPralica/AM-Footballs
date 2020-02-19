@@ -134,6 +134,14 @@ html {
     background-color: rgb(252, 15, 15, 0.2);
 }
 
+.PLgreen {
+    background-color: rgb(1, 155, 1, 0.4);
+}
+
+.PLred {
+    background-color: rgb(252, 15, 15, 0.6);
+}
+
  .switch {
     position: relative;
     display: inline-block;

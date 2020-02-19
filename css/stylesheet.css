@@ -8,6 +8,44 @@ html {
     scroll-behavior: smooth;
 }
 
+.navigator {
+    float: right;
+    margin-top: 45PX;
+}
+
+.home-navbar {
+    height: 10vh !important;
+}
+
+.logo img {
+    float: left;
+    width: 250px;
+    height: auto;
+    margin: 0px;
+    background-color: yellow;
+}
+
+#fullCarousel {
+    height: 90vh !important;
+}
+
+.navigator a {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    padding: 7px 15px;
+    border: white solid 1px transparent;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.navigator a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    transition: 1.5s ease;
+}
+
 .section1 {
     height: 100vh;
     width: 100%;
@@ -20,7 +58,7 @@ html {
 .section2 {
     height: 100vh;
     background-position: center;
-    background-color: rgb(104, 248, 236);
+    background-color: rgb(226, 226, 226);
     position: relative;
     text-align: center !important;
 }
@@ -42,35 +80,6 @@ html {
 .section3-dark {
     height: 100vh;
     background-color: rgb(20, 24, 17);
-}
-
-.navigator {
-    float: right;
-    margin-top: 45PX;
-}
-
-.navigator a {
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    padding: 7px 15px;
-    border: white solid 1px transparent;
-    border-radius: 3px;
-    margin: 10px;
-}
-
-.navigator a:hover {
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    transition: 1.5s ease;
-}
-
-.logo img {
-    float: left;
-    width: 250px;
-    height: auto;
-    margin-top: 20px;
 }
 
 .top img {
@@ -194,5 +203,3 @@ input:checked+.slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-
->>>>>>>55151d9c0fec1edc4a707a57b6e77ea364025ab1

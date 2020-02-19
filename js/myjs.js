@@ -1,7 +1,7 @@
     function insertTable(table, cls, myTable) {
         myTable += `<tr>`;
         myTable += `<td ${cls}> ${ table.position } </td>`;
-        myTable += `<td ${cls}> ${ table.team.name } </td>`;
+        myTable += `<td ${cls}> <a href="${ table.team.crestUrl }"> ${ table.team.name }</td>`;
         myTable += `<td ${cls}> ${ table.playedGames } </td>`;
         myTable += `<td ${cls}> ${ table.won } </td>`;
         myTable += `<td ${cls}> ${ table.draw } </td>`;
@@ -54,7 +54,6 @@
                            <th scope="col ">Points</th>
                            </tr></thead><tbody>`
 
-
                 for (let i = 0; i < data.standings[0].table.length; i++) {
                     if (i < 4) {
                         myTable = insertTable(data.standings[0].table[i], 'class="green"', myTable);
@@ -69,7 +68,6 @@
 
                 document.getElementById("spain-division").innerHTML = myTable;
 
-                let boxdivs = "";
                 boxdivs = `<div class="" " style="margin-top:20px;">
                            <div style="width:25px"></div>`
 
@@ -144,7 +142,9 @@
 
 
     function insertMatches() {
-        var teamsID = [];
+
+        var teamsID;
+
         const url = "http://api.football-data.org/v2/competitions/2014/teams";
         fetch(url, {
                 method: "GET",
@@ -156,12 +156,24 @@
                 return resp.json();
             })
             .then(function(data) {
+                // console.log(data.teams[0].id);
+                teamsID = data.teams;
+                teamsID.forEach(element => {
+                    const url = 'http://api.football-data.org/v2/teams/' + element.id + '/matches';
+                    fetch(url, {
+                            method: "GET",
+                            headers: {
+                                "X-Auth-Token": "d38ac557ec364cf79e21a985e5d1cf8c",
+                            }
+                        })
+                        .then(resp => {
+                            return resp.json();
+                        })
+                        .then(function(data) {
+                            console.log(data);
+                        });
 
-                for (let i = 0; i > data.teams.length; i++) {
-                    //console.log(data.teams[i].id);
-                    teamsID.push(data.teams[i].id);
-                }
+                });
             })
-        console.log(teamsID[1]);
 
     }

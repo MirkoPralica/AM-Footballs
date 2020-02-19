@@ -104,3 +104,13 @@ html {
 .red {
     background-color: rgb(252, 15, 15, 0.2);
 }
+
+#kitten {
+    width: 150px;
+    height: 150px;
+}
+
+#kitten img {
+    width: 150px;
+    height: 150px;
+}

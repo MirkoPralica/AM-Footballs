@@ -116,16 +116,16 @@
                            <th scope="col ">Goals</th>
                            <th scope="col ">Team</th>
                            </tr></thead><tbody>`
-                            let x = 1;
-                           for (let i = 0; i < data.scorers.length; i++) {
-                            scoreTable += `<tr>`;
-                            scoreTable += `<td > ${ x } </td>`;
-                                 scoreTable += `<td > ${ data.scorers[i].player.name } </td>`;
-                                 scoreTable += `<td > ${ data.scorers[i].numberOfGoals } </td>`;
-                                 scoreTable += `<td > ${ data.scorers[i].team.name } </td>`;
-                                 scoreTable += `<tr>`;
-                                 x++;
-                        }
+                let x = 1;
+                for (let i = 0; i < data.scorers.length; i++) {
+                    scoreTable += `<tr>`;
+                    scoreTable += `<td > ${ x } </td>`;
+                    scoreTable += `<td > ${ data.scorers[i].player.name } </td>`;
+                    scoreTable += `<td > ${ data.scorers[i].numberOfGoals } </td>`;
+                    scoreTable += `<td > ${ data.scorers[i].team.name } </td>`;
+                    scoreTable += `<tr>`;
+                    x++;
+                }
 
 
                 scoreTable += '</tr></tbody></table>';
@@ -157,11 +157,11 @@
             })
             .then(function(data) {
 
-                for(let i=0 ; i > data.teams.length; i++){
+                for (let i = 0; i > data.teams.length; i++) {
                     //console.log(data.teams[i].id);
                     teamsID.push(data.teams[i].id);
                 }
             })
-            console.log(teamsID[1]);
-        
+        console.log(teamsID[1]);
+
     }

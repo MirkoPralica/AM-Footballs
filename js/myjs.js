@@ -165,3 +165,17 @@
             console.log(teamsID[1]);
         
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var checkbox = document.querySelector('input[type="checkbox"]');
+      
+        checkbox.addEventListener('change', function () {
+          if (checkbox.checked) {
+              document.getElementById("About").classList.remove("section3-light");
+              document.getElementById("About").classList.add("section3-dark");
+            } else {
+                document.getElementById("About").classList.remove("section3-dark");
+                document.getElementById("About").classList.add("section3-light");
+          }
+        });
+      });

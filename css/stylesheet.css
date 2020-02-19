@@ -8,13 +8,6 @@ html {
     scroll-behavior: smooth;
 }
 
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../Images/Football.jpg");
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
 .section1 {
     height: 100vh;
     width: 100%;
@@ -78,11 +71,6 @@ header {
     margin-top: 20px;
 }
 
-.main {
-    max-width: 1500px;
-    margin: auto;
-}
-
 .top img {
     width: 35px;
     height: 35px;
@@ -90,39 +78,13 @@ header {
     float: right;
 }
 
-.center img {
-    width: 170px;
-    height: auto;
-    position: absolute;
-    bottom: 30px;
-    left: 750px;
-}
-
-.container {
-    width: 100%;
-    max-width: 100% !important;
-    height: 85%;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    display: table-cell;
-    text-align: center !important;
-}
-
 .w-100 {
-    width: 100% !important;
-    height: 70vh;
+    width: 100vh !important;
+    height: 100vh;
 }
 
-.mycarousel {
-    display: inline-block;
-    border: solid 10px;
-    margin-top: 65px;
-    padding: 0px;
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-.col-md-8 {
+.col-md-12 {
+    margin: 0px;
     padding: 0px !important;
 }
 

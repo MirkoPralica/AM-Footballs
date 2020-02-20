@@ -63,14 +63,14 @@ html {
     text-align: center !important;
 }
 
-#About {
+/* #About {
     height: 100vh;
 }
 
 #About p {
     color: limegreen;
     margin-left: 10px;
-}
+} */
 
 .section3-light {
     height: 100vh;
@@ -79,7 +79,7 @@ html {
 
 .section3-dark {
     height: 100vh;
-    background-color: rgb(20, 24, 17);
+    background-color: dimgray;
 }
 
 .top img {

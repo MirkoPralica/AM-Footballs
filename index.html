@@ -24,13 +24,17 @@
             <a href="#About">About</a>
         </nav>
     </div> -->
+    <p>Change the background color</p>
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
     <div class="col-md-12" id="fullCarousel">
         <div id="carouselCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselCaptions" data-slide-to="1"></li>
             </ol>
-
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="./Images/laligabg1.jpg" class="d-block w-100" alt="...">
@@ -59,35 +63,30 @@
     </div>
 
     <div class="section1" id="Spain">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="javascript:clearDiv()">
-                <img src="./Images/laliga.svg" width="mr-auto" height="50" class="d-inline-block align-top" alt="">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="javascript:tableAPIs()" id="standing">Table <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:ScoreAPIs()" id="top-scorer">Top Scorers <span class="sr-only">(current)</span></a>
-                    </li>
-
-                </ul>
-            </div>
-            <div>
-                <p id="title-spain"></p>
-            </div>
-            <div class="top">
-                <a href="#Home">
-                    <img src="Images/top.png" alt="">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="javascript:clearDiv()">
+                    <img src="./Images/laliga.svg" width="mr-auto" height="50" class="d-inline-block align-top" alt="">
                 </a>
-            </div>
-        </nav>
-        <div class="spain-details" id="spain-division">
-
-        </div>
-    </div>
-
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="javascript:tableAPIs()" id="standing">Table <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:ScoreAPIs()" id="top-scorer">Top Scorers <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p id="title-spain"></p>
+                </div>
+                <div class="top">
+                    <a href="#Home">
+                        <img src="Images/top.png" alt="">
+                    </a>
+                </div>
+            </nav>
+            <div class="spain-details" id="spain-division"></div>
     </div>
     <div class="section2" id="England">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -114,18 +113,6 @@
             </div>
         </nav>
         <div class="england-details" id="england-division"></div>
-    </div>
-    <div class="section3-light" id="About">
-        <div class="top">
-            <a href="#Home">
-                <img src="Images/top.png" alt=" ">
-            </a>
-            <p>Change the background color</p>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-              </label>
-        </div>
     </div>
 
     <script src="./js/myjs.js"></script>

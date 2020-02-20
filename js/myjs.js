@@ -81,7 +81,9 @@
 
     function clearDiv() {
         document.getElementById("spain-division").innerHTML = "";
-        document.getElementById("title-spain").innerHTML = "";
+        document.getElementById("title-spain").innerHTML = "";   
+        console.log("Spain");
+             
     }
 
     function ScoreAPIs() {
@@ -208,6 +210,8 @@
     function clearDiv() {
         document.getElementById("england-division").innerHTML = "";
         document.getElementById("title-england").innerHTML = "";
+        console.log("England");
+
     }
 
     function ScoreAPIsPL() {
@@ -274,13 +278,15 @@
       
         checkbox.addEventListener('change', function () {
           if (checkbox.checked) {
-              document.getElementById("About").classList.remove("section3-light");
-              document.getElementById("About").classList.add("section3-dark");
+              document.getElementById("Spain").classList.remove("section3-light");
+              document.getElementById("Spain").classList.add("section3-dark");
+              document.getElementById("England").classList.remove("section3-light");
+              document.getElementById("England").classList.add("section3-dark");
             } else {
-                document.getElementById("About").classList.remove("section3-dark");
-                document.getElementById("About").classList.add("section3-light");
+                document.getElementById("Spain").classList.remove("section3-dark");
+                document.getElementById("Spain").classList.add("section3-light");
+                document.getElementById("England").classList.remove("section3-dark");
+                document.getElementById("England").classList.add("section3-light");
           }
         });
       });
-
-

@@ -8,78 +8,76 @@ html {
     scroll-behavior: smooth;
 }
 
-.navigator {
-    float: right;
-    margin-top: 45PX;
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
-.home-navbar {
-    height: 10vh !important;
+.carousel-item img {
+    width: 100vh;
+    height: 100vh;
 }
 
-.logo img {
-    float: left;
-    width: 250px;
-    height: auto;
-    margin: 0px;
-    background-color: yellow;
+.my-brand img {
+    height: 65px;
+    width: auto;
 }
 
-#fullCarousel {
-    height: 100vh !important;
+.my-navbar {
+    position: absolute !important;
+    z-index: 9999;
+    width: 100%;
+    top: 0;
+    height: 80px;
+    background: transparent;
 }
 
-.navigator a {
+#nav-link-id {
+    color: black !important;
     text-decoration: none;
-    font-size: 25px;
-    color: black;
-    padding: 7px 15px;
-    border: white solid 1px transparent;
-    border-radius: 3px;
-    margin: 10px;
+    font-size: 22px;
+    margin-right: 30px;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    align-content: center;
 }
 
-.navigator a:hover {
+#nav-link-id:hover {
+    transition: 1s ease;
+    color: azure !important;
+    border: solid black 1px transparent;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
-    color: white;
-    background-color: black;
-    transition: 1.5s ease;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.section1 {
+.section-light {
     height: 100vh;
     width: 100%;
     background-position: center;
-    background-color: rgb(212, 230, 248);
+    background-color: rgb(249, 241, 167);
     position: relative;
     text-align: center !important;
 }
 
-.section2 {
+.section-dark {
     height: 100vh;
+    width: 100%;
     background-position: center;
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(158, 153, 107);
     position: relative;
     text-align: center !important;
 }
 
-/* #About {
-    height: 100vh;
-}
-
-#About p {
-    color: limegreen;
-    margin-left: 10px;
-} */
-
-.section3-light {
-    height: 100vh;
-    background-color: rgb(248, 248, 218);
-}
-
-.section3-dark {
-    height: 100vh;
-    background-color: dimgray;
+.top {
+    float: right;
 }
 
 .top img {
@@ -89,14 +87,13 @@ html {
     float: right;
 }
 
-.w-100 {
-    width: 100vh !important;
-    height: 100vh;
-}
 
-.col-md-12 {
-    margin: 0px;
-    padding: 0px !important;
+/* Table */
+
+.table {
+    font-size: 13.5px;
+    text-align: center;
+    width: 100%;
 }
 
 .spain-details {
@@ -111,16 +108,6 @@ html {
     height: 90vh;
     margin: 0 auto;
     display: inline-block;
-}
-
-.table {
-    font-size: 13.5px;
-    text-align: center;
-    width: 100%;
-}
-
-.teamName-Spain {
-    font-weight: bold
 }
 
 #title-spain {
@@ -143,16 +130,7 @@ html {
     background-color: rgb(252, 15, 15, 0.2);
 }
 
-
-.PLgreen {
-    background-color: rgb(1, 155, 1, 0.4);
-}
-
-.PLred {
-    background-color: rgb(252, 15, 15, 0.6);
-}
-
- .switch {
+.switch {
     position: relative;
     display: inline-block;
     width: 60px;
@@ -213,4 +191,14 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
+#logoimg {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
 
+#logoimg-dark {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}

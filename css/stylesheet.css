@@ -47,7 +47,7 @@ html {
 }
 
 .section1 {
-    height: 100vh;
+    height: 130vh;
     width: 100%;
     background-position: center;
     background-color: rgb(212, 230, 248);
@@ -56,7 +56,7 @@ html {
 }
 
 .section2 {
-    height: 100vh;
+    height: 130vh;
     background-position: center;
     background-color: rgb(226, 226, 226);
     position: relative;

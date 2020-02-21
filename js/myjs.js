@@ -1,3 +1,4 @@
+  
     function insertTable(table, cls, myTable) {
         myTable += `<tr>`;
         myTable += `<td ${cls}> ${ table.position } </td>`;

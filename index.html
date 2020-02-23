@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <title>AM-Footballs</title>
-
 </head>
 
 <body>
@@ -18,8 +17,8 @@
             <div class="container-fluid">
                 <a class="my-brand navbar-brand" href="#"><img src="./Images/logo.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+                     <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
@@ -34,8 +33,9 @@
                         </li>
                     </ul>
                 </div>
+            </div>
         </nav>
-        </div>
+
         <div id="carouselExampleCaptions" class="my-carousel carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -67,7 +67,8 @@
             </a>
         </div>
     </div>
-    <<<<<<< HEAD <div class="section-light" id="Spain">
+
+    <div class="section-light" id="Spain">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="javascript:clearDiv()">
                 <img src="./Images/laliga.svg" width="mr-auto" height="50" class="d-inline-block align-top" alt="">
@@ -96,159 +97,106 @@
                 </a>
             </div>
         </nav>
-        <div class="spain-details" id="spain-division">
+        <div class="spain-details" id="spain-division"></div>
+    </div>
 
+    <div class="section-light" id="England">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="./Images/PLlogo.png" width="mr-auto" height="50" class="d-inline-block align-top" alt=" ">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="javascript:tableAPIsPL()" id="standing">Table <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:ScoreAPIsPL()" id="top-scorer">Top Scorers <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <p id="title-england"></p>
+            </div>
+            <div class="top">
+                <a href="#main-page">
+                    <img src="Images/top.png" alt=" ">
+                </a>
+            </div>
+        </nav>
+        <div class="england-details" id="england-division"></div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
         </div>
-        <div id="appear-img">
-        </div>
+    </div>
 
-        </div>
-        <div class="section-light" id="England">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                    <img src="./Images/PLlogo.png" width="mr-auto" height="50" class="d-inline-block align-top" alt=" "> =======
-                    <div class="section-light" id="Spain">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <a class="navbar-brand" href="javascript:clearDiv()">
-                                <img src="./Images/laliga.svg" width="mr-auto" height="50" class="d-inline-block align-top" alt=""> >>>>>>> b195a2bff81c324b967646dc8a5c505103751315
-                            </a>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="javascript:tableAPIsSL()" id="standing">Table <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="javascript:ScoreAPIsSL()" id="top-scorer">Top Scorers <span class="sr-only">(current)</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <p id="title-spain"></p>
-                            </div>
-                            <p style="margin-top: 15px;">Day/Night</p>
-                            <div class="top">
-                                <label class="switch" style="margin-top: 15px;">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                                <a href="#main-page">
-                                    <img src="Images/top.png" alt="">
-                                </a>
-                            </div>
-                        </nav>
-                        <div class="spain-details" id="spain-division"></div>
-                        <!-- The Modal -->
-                        <div id="myModal" class="modal">
-                            <span class="close">&times;</span>
-                            <img class="modal-content" id="img01">
-                        </div>
-                        <div class="section-light" id="England">
-                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                <a class="navbar-brand" href="#">
-                                    <img src="./Images/PLlogo.png" width="mr-auto" height="50" class="d-inline-block align-top" alt=" ">
-                                </a>
-                                <div class="collapse navbar-collapse" id="navbarNav">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="javascript:tableAPIsPL()" id="standing">Table <span class="sr-only">(current)</span></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:ScoreAPIsPL()" id="top-scorer">Top Scorers <span class="sr-only">(current)</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <p id="title-england"></p>
-                                </div>
-                                <div class="top">
-                                    <a href="#main-page">
-                                        <img src="Images/top.png" alt=" ">
-                                    </a>
-                                </div>
-                            </nav>
-                            <div class="england-details" id="england-division"></div>
-                        </div>
-                        <div class="section-light" id="Contact">
-                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                <a class="navbar-brand" href="#">
-                                    <h4>Contact Information</h4>
-                                </a>
-                                <div class="top">
-                                    <a href="#main-page">
-                                        <img src="Images/top.png" alt=" ">
-                                    </a>
-                                </div>
-                            </nav>
-                            <div class="about-details" id="about-division">
-                                <section id="contact">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-7" id="map">
-                                                <h5><strong>Our location:</strong></h5>
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.3772184216878!2d11.993038515812133!3d57.71004994681796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff482ffffffff%3A0x557819ffadf9d967!2sAH%2C%20VH%2C%20TH%20-%20Plush%C3%B6gskolan%20AB%20i%20G%C3%B6teborg!5e0!3m2!1ssv!2sse!4v1582370789618!5m2!1ssv!2sse"
-                                                    width="100%" height="315" frameborder="0" style="border: solid 2px gray" allowfullscreen></iframe>
-                                            </div>
-                                            <div class="form-div col-md-5">
-                                                <h5><strong>Send a message:</strong></h5>
-                                                <form action="" method="post" onsubmit="return submitmethod();" ; onchange="return FormValidation();">
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control" name="" value="" placeholder="Name" required id="firstname">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="email" class="form-control" name="" value="" placeholder="E-mail" required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="tel" class="form-control" name="" value="" placeholder="Phone" required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <textarea class="form-control" name="" rows="3" placeholder="Message" required style="resize: none;"></textarea>
-                                                    </div>
-                                                    <button class="btn btn-default" type="submit" name="button">
-                                    <i class="" aria-hidden="true"></i> Submit
-                                </button>
-                                                    <div id="submit-success">
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="well well-sm">
-                                            <h5><strong>Adress:</strong></h5>
-                                            <p>Teknikhögskolan <br />Anders Personsgatan 14 <br />416 64 Göteborg <br />031-700 83 00 <br />goteborg@plushogskolan.se</p>
-                                        </div>
-                                    </div>
-                                </section>
-                                <div class="icons">
-                                    <a href="https://sv-se.facebook.com/teknikhogskolan" class="fa fa-facebook" target="_blank"></a>
-                                    <a href="https://twitter.com/teknikhogskolan" class="fa fa-twitter" target="_blank"></a>
-                                    <a href="https://www.instagram.com/teknikhogskolan/" class="fa fa-instagram" target="_blank"></a>
-                                    <a href="https://www.linkedin.com/school/teknikhogskolan/?originalSubdomain=se" class="fa fa-linkedin" target="_blank"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <<<<<<< HEAD <div class="section-light" id="Contact">
-                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                <a class="navbar-brand" href="#"></a>
-                                <div class="top">
-                                    <a href="#main-page">
-                                        <img src="Images/top.png" alt=" ">
-                                    </a>
-                                </div>
-                            </nav>
-                            <div class="about-details" id="about-division"></div>
+    <div class="section-light" id="Contact">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <h4>Contact Information</h4>
+            </a>
+            <div class="top">
+                <a href="#main-page">
+                    <img src="Images/top.png" alt=" ">
+                </a>
+            </div>
+        </nav>
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7" id="map">
+                        <h5><strong>Our location:</strong></h5>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.3772184216878!2d11.993038515812133!3d57.71004994681796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff482ffffffff%3A0x557819ffadf9d967!2sAH%2C%20VH%2C%20TH%20-%20Plush%C3%B6gskolan%20AB%20i%20G%C3%B6teborg!5e0!3m2!1ssv!2sse!4v1582370789618!5m2!1ssv!2sse"
+                            width="100%" height="315" frameborder="0" style="border: solid 2px gray" allowfullscreen></iframe>
                     </div>
+                    <div class="form-div col-md-5">
+                        <h5><strong>Send a message:</strong></h5>
+                        <form action="" method="post" onsubmit="return submitmethod();" ; onchange="return FormValidation();">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="" value="" placeholder="Name" required id="firstname">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="" value="" placeholder="E-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" name="" value="" placeholder="Phone" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="" rows="3" placeholder="Message" required style="resize: none;"></textarea>
+                            </div>
+                            <button class="btn btn-default" type="submit" name="button">
+                                <i class="" aria-hidden="true"></i> Submit
+                            </button>
+                            <div id="submit-success"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="well well-sm">
+                    <h5><strong>Adress:</strong></h5>
+                    <p>Teknikhögskolan <br />Anders Personsgatan 14 <br />416 64 Göteborg <br />031-700 83 00 <br />goteborg@plushogskolan.se</p>
+                </div>
+            </div>
+        </section>
+        <div class="icons">
+            <a href="https://sv-se.facebook.com/teknikhogskolan" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://twitter.com/teknikhogskolan" class="fa fa-twitter" target="_blank"></a>
+            <a href="https://www.instagram.com/teknikhogskolan/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://www.linkedin.com/school/teknikhogskolan/?originalSubdomain=se" class="fa fa-linkedin" target="_blank"></a>
+        </div>
+    </div>
+    </div>
 
-
-                    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-                    =======
-                    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-                    <script src="/jquery-3.4.1.min.js"></script>
-                    >>>>>>> b195a2bff81c324b967646dc8a5c505103751315
-                    <script src="./js/myjs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/jquery-3.4.1.min.js"></script>
+    <script src="./js/myjs.js"></script>
 </body>
 
 </html>

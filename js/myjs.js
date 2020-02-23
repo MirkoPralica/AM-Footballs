@@ -88,18 +88,11 @@ function tableAPIsSL() {
         });
 }
 
-<<
-<< << < HEAD
-
 function clearDiv() {
     document.getElementById("spain-division").innerHTML = "";
     document.getElementById("title-spain").innerHTML = "";
     console.log("Spain");
 }
-
-===
-=== = >>>
->>> > b195a2bff81c324b967646dc8a5c505103751315
 
 function ScoreAPIsSL() {
     const url = "https://api.football-data.org/v2/competitions/PD/scorers";

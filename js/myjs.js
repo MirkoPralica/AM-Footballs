@@ -1,8 +1,21 @@
-  
+function getlogo(link) {
+    var img = link;
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+
+    modal.style.display = "block";
+    modalImg.src = img;
+
+    modal.onclick = function() {
+        modal.style.display = "none";
+    }
+}
+
+
     function insertTable(table, cls, myTable) {
         myTable += `<tr>`;
         myTable += `<td ${cls}> ${ table.position } </td>`;
-        myTable += `<td ${cls}> ${ table.team.name } </td>`;
+        myTable += `<td ${cls}> <a id="logoimg" href="javascript:;" onclick="getlogo('${logoimg}')"> ${ table.team.name } </a> </td>`;
         myTable += `<td ${cls}> ${ table.playedGames } </td>`;
         myTable += `<td ${cls}> ${ table.won } </td>`;
         myTable += `<td ${cls}> ${ table.draw } </td>`;
@@ -282,11 +295,47 @@
               document.getElementById("Spain").classList.add("section3-dark");
               document.getElementById("England").classList.remove("section3-light");
               document.getElementById("England").classList.add("section3-dark");
+              document.getElementById("Contact").classList.remove("section-light");
+                document.getElementById("Contact").classList.add("section-dark");
             } else {
                 document.getElementById("Spain").classList.remove("section3-dark");
                 document.getElementById("Spain").classList.add("section3-light");
                 document.getElementById("England").classList.remove("section3-dark");
                 document.getElementById("England").classList.add("section3-light");
+                document.getElementById("Contact").classList.remove("section-dark");
+                document.getElementById("Contact").classList.add("section-light");
           }
         });
       });
+
+      function FormValidation() {
+        //First Name Validation 
+        var fn = document.getElementById('firstname').value;
+        if (fn == "") {
+            alert('Please Enter First Name');
+            document.getElementById('firstname').style.borderColor = "red";
+            return false;
+        } else {
+            document.getElementById('firstname').style.borderColor = "green";
+        }
+        if (/^[0-9]+$/.test(document.getElementById("firstname").value)) {
+            alert("First Name Contains Numbers!");
+            document.getElementById('firstname').style.borderColor = "red";
+            return false;
+        } else {
+            document.getElementById('firstname').style.borderColor = "green";
+        }
+        if (fn.length <= 2) {
+            alert('Your Name is To Short');
+            document.getElementById('firstname').style.borderColor = "red";
+            return false;
+        } else {
+            document.getElementById('firstname').style.borderColor = "green";
+        }
+    };
+
+    function submitmethod() {
+
+        document.getElementById("submit-success").innerHTML = '<div class="alert alert-primary" role="alert" style="margin-top:15px">Your submit has succeed..!</div>'
+        setTimeout("submitForm()", 5000); // set timout 
+    }

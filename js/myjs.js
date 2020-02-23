@@ -11,25 +11,25 @@ function getlogo(link) {
     }
 }
 
+function insertTable(table, cls, myTable) {
+    var img = table.team.crestUrl;
+    myTable += `<tr>`;
+    myTable += `<td ${cls}> ${ table.position } </td>`;
+    myTable += `<td ${cls}> <a id="logoimg" href="javascript:;" onclick="getlogo('${img}')"> ${ table.team.name } </a> </td>`;
+    myTable += `<td ${cls}> ${ table.playedGames } </td>`;
+    myTable += `<td ${cls}> ${ table.won } </td>`;
+    myTable += `<td ${cls}> ${ table.draw } </td>`;
+    myTable += `<td ${cls}> ${ table.lost } </td>`;
+    myTable += `<td ${cls}> ${ 38 - table.playedGames } </td>`;
+    myTable += `<td ${cls}> ${ table.goalsFor } </td>`;
+    myTable += `<td ${cls}> ${ table.goalsAgainst } </td>`;
+    myTable += `<td ${cls}> ${ table.goalDifference } </td>`;
+    myTable += `<td ${cls}> ${ table.points } </td>`;
+    myTable += `<tr>`;
+    return myTable;
+}
 
-    function insertTable(table, cls, myTable) {
-        myTable += `<tr>`;
-        myTable += `<td ${cls}> ${ table.position } </td>`;
-        myTable += `<td ${cls}> <a id="logoimg" href="javascript:;" onclick="getlogo('${logoimg}')"> ${ table.team.name } </a> </td>`;
-        myTable += `<td ${cls}> ${ table.playedGames } </td>`;
-        myTable += `<td ${cls}> ${ table.won } </td>`;
-        myTable += `<td ${cls}> ${ table.draw } </td>`;
-        myTable += `<td ${cls}> ${ table.lost } </td>`;
-        myTable += `<td ${cls}> ${ 38 - table.playedGames } </td>`;
-        myTable += `<td ${cls}> ${ table.goalsFor } </td>`;
-        myTable += `<td ${cls}> ${ table.goalsAgainst } </td>`;
-        myTable += `<td ${cls}> ${ table.goalDifference } </td>`;
-        myTable += `<td ${cls}> ${ table.points } </td>`;
-        myTable += `<tr>`;
-        return myTable;
-    }
-
-    function tableAPIs() {
+    function tableAPIsSL() {
         const url = "http://api.football-data.org/v2/competitions/2014/standings";
         fetch(url, {
                 method: "GET",
@@ -93,13 +93,7 @@ function getlogo(link) {
             });
     }
 
-    function clearDiv() {
-        document.getElementById("spain-division").innerHTML = "";
-        document.getElementById("title-spain").innerHTML = "";   
-        console.log("Spain");   
-    }
-
-    function ScoreAPIs() {
+    function ScoreAPIsSL() {
         const url = "https://api.football-data.org/v2/competitions/PD/scorers";
         fetch(url, {
                 method: "GET",
@@ -220,13 +214,6 @@ function getlogo(link) {
             });
     }
 
-    function clearDiv() {
-        document.getElementById("england-division").innerHTML = "";
-        document.getElementById("title-england").innerHTML = "";
-        console.log("England");
-
-    }
-
     function ScoreAPIsPL() {
         const url = "https://api.football-data.org/v2/competitions/PL/scorers";
         fetch(url, {
@@ -285,7 +272,6 @@ function getlogo(link) {
             });
     }
     
-
     document.addEventListener('DOMContentLoaded', function () {
         var checkbox = document.querySelector('input[type="checkbox"]');
       

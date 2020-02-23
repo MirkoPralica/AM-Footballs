@@ -277,19 +277,19 @@ function insertTable(table, cls, myTable) {
       
         checkbox.addEventListener('change', function () {
           if (checkbox.checked) {
-              document.getElementById("Spain").classList.remove("section3-light");
-              document.getElementById("Spain").classList.add("section3-dark");
-              document.getElementById("England").classList.remove("section3-light");
-              document.getElementById("England").classList.add("section3-dark");
-              document.getElementById("Contact").classList.remove("section-light");
-                document.getElementById("Contact").classList.add("section-dark");
+                document.getElementById("Spain").classList.remove("section-light");
+                document.getElementById("Spain").classList.add("section-dark");
+                document.getElementById("England").classList.remove("section-light");
+                document.getElementById("England").classList.add("section-dark");
+                document.getElementById("Contact").classList.remove("section-light");
+                document.getElementById("Contact").classList.add("section-dark");                
             } else {
-                document.getElementById("Spain").classList.remove("section3-dark");
-                document.getElementById("Spain").classList.add("section3-light");
-                document.getElementById("England").classList.remove("section3-dark");
-                document.getElementById("England").classList.add("section3-light");
+                document.getElementById("Spain").classList.remove("section-dark");
+                document.getElementById("Spain").classList.add("section-light");
+                document.getElementById("England").classList.remove("section-dark");
+                document.getElementById("England").classList.add("section-light");
                 document.getElementById("Contact").classList.remove("section-dark");
-                document.getElementById("Contact").classList.add("section-light");
+                document.getElementById("Contact").classList.add("section-light");                
           }
         });
       });

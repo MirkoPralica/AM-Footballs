@@ -83,8 +83,7 @@
     function clearDiv() {
         document.getElementById("spain-division").innerHTML = "";
         document.getElementById("title-spain").innerHTML = "";   
-        console.log("Spain");
-             
+        console.log("Spain");   
     }
 
     function ScoreAPIs() {

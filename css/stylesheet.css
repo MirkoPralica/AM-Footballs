@@ -87,9 +87,6 @@ html {
     float: right;
 }
 
-
-/* Table */
-
 .table {
     font-size: 13.5px;
     text-align: center;
@@ -197,8 +194,160 @@ input:checked+.slider:before {
     text-decoration: none;
 }
 
+#contact {
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+#map h5 {
+    text-align: left;
+}
+
 #logoimg-dark {
     font-weight: bold;
     color: black;
     text-decoration: none;
+}
+
+#contact .well {
+    margin-top: 10px;
+    border-radius: 0;
+    text-align: left;
+}
+
+#contact .well p {
+    font-size: 15px;
+}
+
+#contact .form-control {
+    border-radius: 0;
+    border: 2px solid grey;
+}
+
+#contact button {
+    width: 75px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 0;
+    border: 2px solid grey;
+    background-color: white;
+    color: black;
+}
+
+#contact button:hover {
+    border-radius: 0;
+    border: 2px solid grey;
+    background-color: grey;
+    color: white;
+    transition: 1s ease;
+}
+
+#contact .row {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    #contact iframe {
+        margin-bottom: 15px;
+    }
+}
+
+.form-div h5 {
+    text-align: left;
+}
+
+.icons {
+    margin-top: 40px;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 20px !important;
+    width: 40px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    text-decoration: none;
+    color: white;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: rgb(255, 92, 81);
+    color: white;
+}
+
+.fa-linkedin {
+    background: rgb(69, 143, 255);
+    color: white;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {
+    opacity: 0.7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    padding: 25px;
+    width: 500px !important;
+    height: 500px !important;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
 }

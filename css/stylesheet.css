@@ -54,7 +54,7 @@
             }
             
             #nav-link-id:hover {
-                transition: 0.7s ease;
+                transition: 0.5s ease;
                 color: azure !important;
                 border: solid rgb(48, 0, 53) 1px transparent;
                 border-radius: 25px;
@@ -80,7 +80,7 @@
                 height: 100vh;
                 width: 100%;
                 background-position: center;
-                background-color: rgb(158, 153, 107);
+                background-color: rgb(218, 213, 165);
                 position: relative;
                 text-align: center !important;
             }
@@ -383,7 +383,7 @@
             }
             
             .team-logo {
-                height: 18px;
+                height: 20px;
                 margin-left: 5px;
             }
             

@@ -1,3 +1,6 @@
+window.onload = tableAPIsPL();
+window.onload = tableAPIsSL();
+
 function getlogo(link) {
     var img = link;
     var modal = document.getElementById("myModal");
@@ -15,7 +18,7 @@ function insertTable(table, cls, myTable) {
     var img = table.team.crestUrl;
     myTable += `<tr>`;
     myTable += `<td ${cls}> ${ table.position } </td>`;
-    myTable += `<td ${cls}> <a id="logoimg" href="javascript:;" onclick="getlogo('${img}')"> ${ table.team.name } </a> </td>`;
+    myTable += `<td ${cls}> <a id="logoimg" href="javascript:;" onclick="getlogo('${img}')"> ${ table.team.name } <img src="${img}" class="team-logo"></a> </td>`;
     myTable += `<td ${cls}> ${ table.playedGames } </td>`;
     myTable += `<td ${cls}> ${ table.won } </td>`;
     myTable += `<td ${cls}> ${ table.draw } </td>`;
@@ -88,11 +91,6 @@ function tableAPIsSL() {
         });
 }
 
-function clearDiv() {
-    document.getElementById("spain-division").innerHTML = "";
-    document.getElementById("title-spain").innerHTML = "";
-    console.log("Spain");
-}
 
 function ScoreAPIsSL() {
     const url = "https://api.football-data.org/v2/competitions/PD/scorers";
@@ -128,10 +126,10 @@ function ScoreAPIsSL() {
                             </tr></thead><tbody>`
             let x = 1;
             for (let i = 0; i < data.scorers.length; i++) {
-                scoreTable += `<tr>`;
+                scoreTable += `<tr class="player-row">`;
                 scoreTable += `<td > ${ x } </td>`;
-                scoreTable += `<td > ${ data.scorers[i].player.name } </td>`;
-                scoreTable += `<td > ${ data.scorers[i].numberOfGoals } </td>`;
+                scoreTable += `<td class="player-name"> ${ data.scorers[i].player.name } </td>`;
+                scoreTable += `<td  class="goal-numbers"> ${ data.scorers[i].numberOfGoals } <img src="./Images/Football.png" class="football-image" </td>`;
                 scoreTable += `<td > ${ data.scorers[i].team.name } </td>`;
                 scoreTable += `<tr>`;
                 x++;
@@ -240,10 +238,10 @@ function ScoreAPIsPL() {
                             </tr></thead><tbody>`
             let x = 1;
             for (let i = 0; i < data.scorers.length; i++) {
-                scoreTable += `<tr>`;
+                scoreTable += `<tr class="player-row">`;
                 scoreTable += `<td > ${ x } </td>`;
-                scoreTable += `<td > ${ data.scorers[i].player.name } </td>`;
-                scoreTable += `<td > ${ data.scorers[i].numberOfGoals } </td>`;
+                scoreTable += `<td class="player-name"> ${ data.scorers[i].player.name } </td>`;
+                scoreTable += `<td class="goal-numbers"> ${ data.scorers[i].numberOfGoals }  <img src="./Images/Football.png" class="football-image"</td>`;
                 scoreTable += `<td > ${ data.scorers[i].team.name } </td>`;
                 scoreTable += `<tr>`;
                 x++;
@@ -308,7 +306,19 @@ function FormValidation() {
 };
 
 function submitmethod() {
-
-    document.getElementById("submit-success").innerHTML = '<div class="alert alert-primary" role="alert" style="margin-top:15px">Your submit has succeed..!</div>'
-    setTimeout("submitForm()", 5000); // set timout 
-}
+    // show Loading in submit-success
+    document.getElementById("submit-success").innerHTML = '<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>';
+    setTimeout(function() {
+        // this will remove the loading and show the success message
+        document.getElementById("submit-message").innerHTML =
+            `<div class="alert alert-success alert-dismissible fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                Your submit has succeed..!
+            </div>`
+        document.getElementById("submit-success").innerHTML = "";
+    }, 5000); // set timout
+    // this will prevent the submit
+    return false;
+};

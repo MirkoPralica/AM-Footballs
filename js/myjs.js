@@ -56,7 +56,7 @@ function tableAPIsSL() {
             document.getElementById("title-spain").innerHTML = output;
 
             let myTable = "";
-            myTable = `<table class="table table-striped table-sm" " style="margin-top:20px;">
+            myTable = `<table class="table table-striped table-sm" " style="margin-top:30px;">
                             <thead class="thead-dark ">
                             <tr>
                             <th scope="col ">#</th>
@@ -116,21 +116,25 @@ function ScoreAPIsSL() {
             document.getElementById("title-spain").innerHTML = output;
 
             let scoreTable = "";
-            scoreTable = `<table class="table table-striped table-sm" " style="margin-top:20px;">
+            scoreTable = `<table class="table table-striped table-sm" " style="margin-top:30px;">
                             <thead class="thead-dark ">
                             <tr>
                             <th scope="col ">#</th>
                             <th scope="col ">Name</th>
-                            <th scope="col ">Goals</th>
                             <th scope="col ">Team</th>
+                            <th scope="col ">Nationality</th>
+                            <th scope="col ">Position</th>
+                            <th scope="col ">Goals</th>
                             </tr></thead><tbody>`
             let x = 1;
             for (let i = 0; i < data.scorers.length; i++) {
                 scoreTable += `<tr class="player-row">`;
                 scoreTable += `<td > ${ x } </td>`;
                 scoreTable += `<td class="player-name"> ${ data.scorers[i].player.name } </td>`;
-                scoreTable += `<td  class="goal-numbers"> ${ data.scorers[i].numberOfGoals } <img src="./Images/Football.png" class="football-image" </td>`;
                 scoreTable += `<td > ${ data.scorers[i].team.name } </td>`;
+                scoreTable += `<td > ${ data.scorers[i].player.nationality } </td>`;
+                scoreTable += `<td > ${ data.scorers[i].player.position } </td>`;
+                scoreTable += `<td  class="goal-numbers"> ${ data.scorers[i].numberOfGoals } <img src="./Images/Football.png" class="football-image" </td>`;
                 scoreTable += `<tr>`;
                 x++;
             }
@@ -169,7 +173,7 @@ function tableAPIsPL() {
             document.getElementById("title-england").innerHTML = output;
 
             let myTable = "";
-            myTable = `<table class="table table-striped table-sm" " style="margin-top:20px;">
+            myTable = `<table class="table table-striped table-sm" " style="margin-top:30px;">
                             <thead class="thead-dark ">
                             <tr>
                             <th scope="col ">#</th>
@@ -228,21 +232,25 @@ function ScoreAPIsPL() {
             document.getElementById("title-england").innerHTML = output;
 
             let scoreTable = "";
-            scoreTable = `<table class="table table-striped table-sm" " style="margin-top:20px;">
+            scoreTable = `<table class="table table-striped table-sm" " style="margin-top:30px;">
                             <thead class="thead-dark ">
                             <tr>
                             <th scope="col ">#</th>
                             <th scope="col ">Name</th>
-                            <th scope="col ">Goals</th>
                             <th scope="col ">Team</th>
+                            <th scope="col ">Nationality</th>
+                            <th scope="col ">Position</th>
+                            <th scope="col ">Goals</th>
                             </tr></thead><tbody>`
             let x = 1;
             for (let i = 0; i < data.scorers.length; i++) {
                 scoreTable += `<tr class="player-row">`;
                 scoreTable += `<td > ${ x } </td>`;
                 scoreTable += `<td class="player-name"> ${ data.scorers[i].player.name } </td>`;
-                scoreTable += `<td class="goal-numbers"> ${ data.scorers[i].numberOfGoals }  <img src="./Images/Football.png" class="football-image"</td>`;
                 scoreTable += `<td > ${ data.scorers[i].team.name } </td>`;
+                scoreTable += `<td > ${ data.scorers[i].player.nationality } </td>`;
+                scoreTable += `<td > ${ data.scorers[i].player.position } </td>`;
+                scoreTable += `<td class="goal-numbers"> ${ data.scorers[i].numberOfGoals }  <img src="./Images/Football.png" class="football-image"</td>`;
                 scoreTable += `<tr>`;
                 x++;
             }

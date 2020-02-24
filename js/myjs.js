@@ -265,27 +265,19 @@ function ScoreAPIsPL() {
         });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    var checkbox = document.querySelector('input[type="checkbox"]');
-
-    checkbox.addEventListener('change', function() {
-        if (checkbox.checked) {
-            document.getElementById("Spain").classList.remove("section-light");
-            document.getElementById("Spain").classList.add("section-dark");
-            document.getElementById("England").classList.remove("section-light");
-            document.getElementById("England").classList.add("section-dark");
-            document.getElementById("Contact").classList.remove("section-light");
-            document.getElementById("Contact").classList.add("section-dark");
-        } else {
-            document.getElementById("Spain").classList.remove("section-dark");
-            document.getElementById("Spain").classList.add("section-light");
-            document.getElementById("England").classList.remove("section-dark");
-            document.getElementById("England").classList.add("section-light");
-            document.getElementById("Contact").classList.remove("section-dark");
-            document.getElementById("Contact").classList.add("section-light");
-        }
-    });
+$('#press').change(function(){
+    if(this.checked) {
+        $('.section-light').removeClass('section-dark');
+        $('section-dark').addClass('section-light');
+        console.log("Dark");   
+    }
+    else {
+        $('.section-dark').removeClass("section-light");
+        $('.section-light').addClass("section-dark");
+        console.log("Light");
+    }
 });
+
 
 function FormValidation() {
     //First Name Validation 

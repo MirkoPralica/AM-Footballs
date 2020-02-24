@@ -330,3 +330,8 @@ function submitmethod() {
     // this will prevent the submit
     return false;
 };
+
+$("li").on('click', function() {
+    $("li").removeClass("active");
+    $(this).toggleClass("active");
+});

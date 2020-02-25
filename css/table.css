@@ -1,9 +1,29 @@
+/* Bara för att illustrera vilka lag som är top 4 och bott 4. Klass.green och .red */
+
 .green {
     background-color: rgb(1, 155, 1, 0.2);
 }
 
 .red {
     background-color: rgb(252, 15, 15, 0.2);
+}
+
+.table {
+    font-size: 13.5px;
+    text-align: center;
+    width: 100%;
+}
+
+#logoimg {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+#logoimg-dark {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
 }
 
 .modal {

@@ -9,6 +9,10 @@ $('#press').change(function(){
     }
 });
 
+$("li").on('click', function() {
+    $("li").removeClass("active");
+    $(this).toggleClass("active");
+});
 
 function FormValidation() {
     //First Name Validation 
@@ -55,11 +59,6 @@ function submitmethod() {
     // this will prevent the submit
     return false;
 };
-
-$("li").on('click', function() {
-    $("li").removeClass("active");
-    $(this).toggleClass("active");
-});
 
 function searchValidation() {
     var fn = document.getElementById('searchfield').value;

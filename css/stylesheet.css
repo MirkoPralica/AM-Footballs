@@ -42,12 +42,6 @@ html {
     float: right;
 }
 
-.table {
-    font-size: 13.5px;
-    text-align: center;
-    width: 100%;
-}
-
 .spain-details {
     width: 90%;
     height: 90vh;
@@ -66,32 +60,12 @@ html {
     padding-top: 15px;
     margin-right: 10px;
     font-size: 18px;
+    color: rgb(48, 0, 53);
 }
 
 #title-england {
     padding-top: 15px;
     margin-right: 10px;
     font-size: 18px;
-}
-
-#logoimg {
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-}
-
-
-#logoimg-dark {
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-}
-
-
-#title-england {
-    color: rgb(48, 0, 53);
-}
-
-#title-spain {
     color: rgb(48, 0, 53);
 }

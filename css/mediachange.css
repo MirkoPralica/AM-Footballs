@@ -1,0 +1,59 @@
+@media screen and (max-width: 1175px) {
+    .navbar-nav {
+        float: none;
+        color: limegreen;
+    }
+    
+    #Spain{
+        font-size: xx-small;
+    }
+    #Spain p {
+        font-size: xx-small;
+    }
+    #standing {
+        font-size: xx-small;
+    }
+    #top-scorer {
+        font-size: xx-small;
+    }
+    .thead-dark th td {
+        font-size: xx-small;
+    }
+    .navbar-expand {
+        font-size: xx-small;
+    }
+    .navbar-brand  {
+        float: none;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        size: 3px;
+    }
+
+    #England p {
+        font-size: xx-small;
+    }
+    img {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #Spain{
+        font-size: xx-small;
+    }
+    #Spain p {
+        font-size: xx-small;
+    }
+    .thead-dark th td {
+        font-size: xx-small;
+    }
+    .navbar-brand {
+        size: 3px;
+    }
+
+    #England p {
+        font-size: small;
+    }
+}

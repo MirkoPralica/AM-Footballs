@@ -267,14 +267,12 @@ function ScoreAPIsPL() {
 
 $('#press').change(function(){
     if(this.checked) {
-        $('.section-light').removeClass('section-dark');
-        $('section-dark').addClass('section-light');
-        console.log("Dark");   
-    }
-    else {
         $('.section-dark').removeClass("section-light");
         $('.section-light').addClass("section-dark");
-        console.log("Light");
+    }
+    else {
+        $('.section-light').removeClass('section-dark');
+        $('section-dark').addClass('section-light');
     }
 });
 

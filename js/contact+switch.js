@@ -101,5 +101,4 @@ function searchsubmit() {
         .then(function(data) {
 
         });
-
 }

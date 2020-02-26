@@ -3,9 +3,12 @@
         float: none;
         color: limegreen;
     }
-    
-    #Spain{
+    .table {
         font-size: xx-small;
+    }
+    a {
+        font-size: xx-small;
+        font-weight: lighter;
     }
     #Spain p {
         font-size: xx-small;
@@ -17,12 +20,15 @@
         font-size: xx-small;
     }
     .thead-dark th td {
+        display: none;
         font-size: xx-small;
     }
     .navbar-expand {
+        display: none;
         font-size: xx-small;
     }
     .navbar-brand  {
+        display: none;
         float: none;
         justify-content: center;
         align-items: center;
@@ -34,6 +40,7 @@
         font-size: xx-small;
     }
     img {
+        display: none;
         height: 60px;
         width: 60px;
     }

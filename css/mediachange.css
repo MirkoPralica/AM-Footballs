@@ -1,10 +1,67 @@
 @media screen and (max-width: 1175px) {
-    .navbar-nav {
-        float: none;
-        color: limegreen;
+    #standing {
+        display: flexbox;
+         width: 90%;
+         display: inline;
     }
-    .table {
+    #top-scorer {
+         display: flex;
+         width: 90%;
+    }
+    #navbarNav {
+        margin-left: 10px;
+        width: 90%;
+    }
+    .navbar-expand-lg {
+        display: flex;
+    }
+    a {
+        font-size: small;
+        font-weight: lighter;
+    }
+    #Spain p {
         font-size: xx-small;
+    }
+    #standing {
+        font-size: small;
+    }
+    #top-scorer {
+        font-size: small;
+    }
+    .thead-dark th td {
+        /* display: none; */
+        font-size: small;
+    }
+    .navbar-expand {
+        /* display: none; */
+        font-size: small;
+    }
+    /* .navbar-brand  {
+        display: none;
+        float: none;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        size: 3px;
+    } */
+
+    #England p {
+        font-size: xx-small;
+    }
+    img {
+        display: none;
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #navbarNav {
+        margin-left: 10px;
+        width: 90%;
+    }
+    .navbar-expand-lg {
+        display: flex;
     }
     a {
         font-size: xx-small;
@@ -20,47 +77,23 @@
         font-size: xx-small;
     }
     .thead-dark th td {
-        display: none;
+        /* display: none; */
         font-size: xx-small;
     }
     .navbar-expand {
         display: none;
         font-size: xx-small;
     }
-    .navbar-brand  {
-        display: none;
-        float: none;
-        justify-content: center;
-        align-items: center;
-        float: left;
-        size: 3px;
+    #standing {
+        display: flexbox;
+         width: 90%;
+         display: inline;
+         
     }
+    #top-scorer {
+         display: flex;
+         width: 90%;
+         display: inline;
 
-    #England p {
-        font-size: xx-small;
-    }
-    img {
-        display: none;
-        height: 60px;
-        width: 60px;
-    }
-}
-
-@media screen and (max-width: 770px) {
-    #Spain{
-        font-size: xx-small;
-    }
-    #Spain p {
-        font-size: xx-small;
-    }
-    .thead-dark th td {
-        font-size: xx-small;
-    }
-    .navbar-brand {
-        size: 3px;
-    }
-
-    #England p {
-        font-size: small;
     }
 }

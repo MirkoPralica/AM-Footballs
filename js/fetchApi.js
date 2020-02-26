@@ -1,8 +1,6 @@
 window.onload = tableAPIs(2014, 'spain');
 window.onload = tableAPIs(2021, 'england');
 
-
-
 function getlogo(link) {
     var img = link;
     var modal = document.getElementById("myModal");
@@ -33,8 +31,6 @@ function insertTable(table, cls, myTable) {
     myTable += `<tr>`;
     return myTable;
 }
-
-
 
 function tableAPIs(code, country) {
     let primaryApi = `http://api.football-data.org/v2/competitions/${ code }/standings`;
@@ -89,13 +85,12 @@ function tableAPIs(code, country) {
 
             myTable += '</tr></tbody></table>';
 
-             document.getElementById(`${ country }-division`).innerHTML = myTable;
+            document.getElementById(`${ country }-division`).innerHTML = myTable;
         })
         .catch(function(error) {
             console.log(error);
         });
 }
-
 
 function ScoreAPIs(code, country) {
     const url = `https://api.football-data.org/v2/competitions/${ code }/scorers`;

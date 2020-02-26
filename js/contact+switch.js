@@ -1,9 +1,8 @@
-$('#press').change(function(){
-    if(this.checked) {
+$('#press').change(function() {
+    if (this.checked) {
         $('.section-dark').removeClass("section-light");
         $('.section-light').addClass("section-dark");
-    }
-    else {
+    } else {
         $('.section-light').removeClass('section-dark');
         $('section-dark').addClass('section-light');
     }
@@ -59,45 +58,3 @@ function submitmethod() {
     // this will prevent the submit
     return false;
 };
-
-function searchValidation() {
-    var fn = document.getElementById('searchfield').value;
-    if (fn == "") {
-        alert('Please Enter Team Name');
-        document.getElementById('searchfield').style.borderColor = "red";
-        return false;
-
-    } else if (/^[0-9]+$/.test(document.getElementById("searchfield").value)) {
-        alert("Team Name Contains Numbers!");
-        document.getElementById('searchfield').style.borderColor = "red";
-        return false;
-
-    } else if (fn.length <= 2) {
-        alert('Team Name is To Short');
-        document.getElementById('searchfield').style.borderColor = "red";
-        return false;
-
-    } else {
-        document.getElementById('searchfield').style.borderColor = "green";
-    }
-
-    searchsubmit();
-};
-
-
-function searchsubmit() {
-
-    const url = "http://api.football-data.org/v2/competitions/2021/standings";
-    fetch(url, {
-            method: "GET",
-            headers: {
-                "X-Auth-Token": "d38ac557ec364cf79e21a985e5d1cf8c",
-            }
-        })
-        .then(resp => {
-            return resp.json();
-        })
-        .then(function(data) {
-
-        });
-}

@@ -89,7 +89,7 @@ function tableAPIs(code, country) {
 
             myTable += '</tr></tbody></table>';
 
-             document.getElementById(`${ country }-division`).innerHTML = myTable;
+            document.getElementById(`${ country }-division`).innerHTML = myTable;
         })
         .catch(function(error) {
             console.log(error);

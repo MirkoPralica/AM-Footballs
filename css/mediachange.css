@@ -1,126 +1,91 @@
-/*@media screen and (max-width: 1175px) {
-    #standing {
-        display: flexbox;
-         width: 90%;
-         display: inline;
+@media screen and (min-width: 971px){
+    #navbarDropdown {
+        display: none;
     }
-    #top-scorer {
-         display: flex;
-         width: 90%;
+    #navbarDropdownPL{
+        display: none;
     }
-    #navbarNav {
-        margin-left: 10px;
-        width: 90%;
+}
+
+@media screen and (max-width: 1100px) {
+    .logoimg {
+        display: none;
     }
-    .navbar-expand-lg {
-        display: flex;
+    .team-logo {
+        display: none;
     }
-    a {
-        font-size: small;
-        font-weight: lighter;
+    .top img {
+        width: 20px;
+        height: 20px;
     }
     #Spain p {
         font-size: xx-small;
     }
-    #standing {
-        font-size: small;
-    }
-    #top-scorer {
-        font-size: small;
-    }
-    .thead-dark th td {
-        /* display: none; 
-        font-size: small;
-    }
-    .navbar-expand {
-        /* display: none; 
-        font-size: small;
-    }
-    /* .navbar-brand  {
-        display: none;
-        float: none;
-        justify-content: center;
-        align-items: center;
-        float: left;
-        size: 3px;
-    } 
-
     #England p {
         font-size: xx-small;
     }
-    img {
-        display: none;
-        height: 60px;
-        width: 60px;
+    .thead-dark th td {
+        font-size: small;
     }
-    .collapse {
-        display: none !important;
+    .nav-link {
+        font-size: small;
+    }
+    #navbarDropdownPL{
+        float: left;
+        font-size: small;
+    }
+    #Spain .align-top {
+        width: 60px;
+        height: 60px;
+    }
+    #England .align-top {
+        width: 40px;
+        height: 40px;
     }
 }
 
-@media screen and (max-width: 770px) {
-    #navbarNav {
-        margin-left: 10px;
-        width: 90%;
-    }
-    .navbar-expand-lg {
-        display: flex;
-    }
-    a {
-        font-size: xx-small;
-        font-weight: lighter;
-    }
-    #spain-division {
-        font-size: xx-small;
-    }
+@media screen and (max-width: 780px) {
+
     .thead-dark {
         font-size: xx-small;
     }
-    .green {
-        font-size: xx-small;
-    }
-    .red {
-        font-size: xx-small;
-    }
-    a {
-        font-size: xx-small;
-    }
-    #Spain p {
-        font-size: xx-small;
+    p {
         display: none;
     }
-    #standing {
-        font-size: xx-small;
-    }
-    #top-scorer {
-        font-size: xx-small;
-    }
-    .thead-dark th td {
-        /* display: none; 
-        font-size: xx-small;
-    }
-    .navbar-expand {
-        display: none;
-        font-size: xx-small;
-    }
-    #standing {
-        display: flexbox;
-         width: 90%;
-         display: inline;
-         
-    }
-    #top-scorer {
-         display: flex;
-         width: 90%;
-         display: inline;
-    }
-    .slider {
+    .switch {
         display: none;
     }
-    .collapse {
-        display: show !important;
+    .table {
+        font-size: xx-small;
+    }
+    #logoimg {
+        font-weight: lighter;
+        font-size: xx-small;
+    }
+    .nav-link {
+        font-size: xx-small;
+    }
+    #navbarDropdownPL {
+        font-size: xx-small;
+    }
+    .team-logo {
+        display: none;
+    }
+    
+    .top img {
+        width: 20px;
+        height: 20px;
+    }
+    .football-image {
+        display: none;
+    }
+    #Spain {
+        margin-left: 0px;
+    }
+    #england-division .thead-dark{
+        margin-left: 1px;
+        margin-top: 1px;
+        margin-right: 1px;
+        margin-bottom: 1px;
     }
 }
-
-
-*/

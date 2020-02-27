@@ -38,8 +38,6 @@
     margin-bottom: 30px;
 }
 
-
-
 #contact .well {
     margin-top: 10px !important;
     border-radius: 0;
@@ -54,7 +52,6 @@
 #contact .well h5 {
     color: rgb(48, 0, 53);
 }
-
 
 @media (max-width: 768px) {
     #contact iframe {

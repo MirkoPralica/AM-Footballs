@@ -169,6 +169,7 @@ function searchValidation() {
     var inputValue = document.getElementById('myInput').value;
     if (teamsNames.includes(inputValue)) {
         getTeamInfo(inputValue);
+        document.getElementById('searchform').reset();
     } else {
         alert("Please write a team valid name..!")
     }
@@ -177,8 +178,8 @@ function searchValidation() {
 function getTeamInfo(teamName) {
     var team = teamsArray.find(element => element.name === teamName);
     console.log(teamName);
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("modalTeamImage");
+    var modal = document.getElementById("headerModal");
+    var modalImg = document.getElementById("headermodalImage");
 
     modal.style.display = "block";
     modalImg.src = team.crestUrl;

@@ -88,4 +88,13 @@
         margin-right: 1px;
         margin-bottom: 1px;
     }
+    #Spain {
+        height: 130vh;
+    }
+    #England {
+        height: 110vh;
+    }
+    #Contact {
+        height: 130vh;
+    }
 }

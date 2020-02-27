@@ -21,7 +21,7 @@
     <div class="header" id="main-page">
         <nav class="main-navbar navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="my-brand navbar-brand" href="#"><img src="./Images/logo.png" alt=""></a>
+                <a class="my-brand navbar-brand" href="#"><img src="./Images/logo.png" alt="" class="d-inline-block"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                      <span class="navbar-toggler-icon"></span>
                 </button>
@@ -37,13 +37,13 @@
                             <a class="nav-link" id="nav-link-id" href="#Contact">Contact</a>
                         </li>
                     </ul>
+                    <form class="my-search form-inline my-2 my-lg-0" autocomplete="off" onsubmit="searchValidation()" id="searchform">
+                        <div class="autocomplete">
+                            <input class="form-control mr-sm-2" id="myInput" type="text" name="team" placeholder="Search Team">
+                        </div>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search </button>
+                    </form>
                 </div>
-                <form class="my-search form-inline my-2 my-lg-0" autocomplete="off" onsubmit="searchValidation()" id="searchform">
-                    <div class="autocomplete">
-                        <input class="form-control mr-sm-2" id="myInput" type="text" name="team" placeholder="Search Team">
-                    </div>
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search </button>
-                </form>
             </div>
         </nav>
 
@@ -77,6 +77,9 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        <div id="headerModal" class="modal">
+            <img class="modal-content" id="headermodalImage">
+        </div>
     </div>
 
     <div class="section-light" id="Spain">
@@ -107,7 +110,7 @@
             </div>
             <p style="margin-top: 15px; font-weight: bold; margin-left: 10px;">Day/Night</p>
             <div class="top">
-                <label class="switch" style="margin-top: 15px;">
+                <label class="collapse switch" style="margin-top: 15px;">
                     <input type="checkbox" id="press">
                     <span class="slider round"></span>
                 </label>

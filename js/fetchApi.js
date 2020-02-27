@@ -3,8 +3,9 @@ window.onload = tableAPIs(2021, 'england');
 
 function getlogo(link) {
     var img = link;
+    console.log(link);
     var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("img01");
+    var modalImg = document.getElementById("modalTeamImage");
 
     modal.style.display = "block";
     modalImg.src = img;

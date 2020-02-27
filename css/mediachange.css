@@ -97,18 +97,39 @@
         margin-bottom: 1px;
     }
     #Spain {
-        height: 95vh;
+        height: 120vh;
     }
     #England {
-        height: 80vh;
+        height: 120vh;
     }
     #Contact {
-        height: 95vh;
+        height: 120vh;
     }
     .spain-details {
-        margin-left: -34px;
+        margin-left: -38px;
     }
     .england-details {
         margin-left: -40px;
+    }
+    .well-sm {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .spain-details {
+        margin-left: -10px;
+    }
+    .england-details {
+        margin-left: -10px;
+    }
+    th {
+        font-size: 7px;
+    }
+    .well-sm {
+        display: none;
+    }
+    #Contact {
+        height: 120vh;
     }
 }

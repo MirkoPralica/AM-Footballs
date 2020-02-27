@@ -1,4 +1,4 @@
-@media screen and (max-width: 1175px) {
+/*@media screen and (max-width: 1175px) {
     #standing {
         display: flexbox;
          width: 90%;
@@ -29,11 +29,11 @@
         font-size: small;
     }
     .thead-dark th td {
-        /* display: none; */
+        /* display: none; 
         font-size: small;
     }
     .navbar-expand {
-        /* display: none; */
+        /* display: none; 
         font-size: small;
     }
     /* .navbar-brand  {
@@ -43,7 +43,7 @@
         align-items: center;
         float: left;
         size: 3px;
-    } */
+    } 
 
     #England p {
         font-size: xx-small;
@@ -52,6 +52,9 @@
         display: none;
         height: 60px;
         width: 60px;
+    }
+    .collapse {
+        display: none !important;
     }
 }
 
@@ -93,7 +96,7 @@
         font-size: xx-small;
     }
     .thead-dark th td {
-        /* display: none; */
+        /* display: none; 
         font-size: xx-small;
     }
     .navbar-expand {
@@ -110,6 +113,14 @@
          display: flex;
          width: 90%;
          display: inline;
-
+    }
+    .slider {
+        display: none;
+    }
+    .collapse {
+        display: show !important;
     }
 }
+
+
+*/

@@ -42,6 +42,15 @@
         width: 40px;
         height: 40px;
     }
+    #Spain {
+        height: 110vh;
+    }
+    #England {
+        height: 110vh;
+    }
+    #Contact {
+        height: 110vh;
+    }
 }
 
 @media screen and (max-width: 780px) {
@@ -71,7 +80,6 @@
     .team-logo {
         display: none;
     }
-    
     .top img {
         width: 20px;
         height: 20px;
@@ -89,13 +97,13 @@
         margin-bottom: 1px;
     }
     #Spain {
-        height: 130vh;
+        height: 95vh;
     }
     #England {
-        height: 110vh;
+        height: 80vh;
     }
     #Contact {
-        height: 130vh;
+        height: 95vh;
     }
     .spain-details {
         margin-left: -34px;

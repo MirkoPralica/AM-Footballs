@@ -97,4 +97,10 @@
     #Contact {
         height: 130vh;
     }
+    .spain-details {
+        margin-left: -34px;
+    }
+    .england-details {
+        margin-left: -40px;
+    }
 }

@@ -62,3 +62,12 @@
 .navbar-brand h4 {
     color: rgb(48, 0, 53);
 }
+
+#navbarDropdown {
+    color: rgb(48, 0, 53);
+}
+#navbarDropdown:hover {
+    color: azure;
+    background-color: rgb(48, 0, 53);
+    transition: 0.5s ease;
+}

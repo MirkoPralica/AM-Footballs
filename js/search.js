@@ -25,7 +25,7 @@ function fetchData() {
         fetch(urls[i], {
                 method: "GET",
                 headers: {
-                    "X-Auth-Token": "d38ac557ec364cf79e21a985e5d1cf8c",
+                    "X-Auth-Token": //Här ska nyckeln vara,
                 }
             })
             .then(resp => {

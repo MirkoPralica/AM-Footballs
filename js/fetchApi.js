@@ -39,7 +39,7 @@ function tableAPIs(code, country) {
     fetch(primaryApi, {
             method: "GET",
             headers: {
-                "X-Auth-Token": "d38ac557ec364cf79e21a985e5d1cf8c",
+                "X-Auth-Token": //Här ska nyckeln vara,
             }
         })
         .then(resp => {
@@ -98,7 +98,7 @@ function ScoreAPIs(code, country) {
     fetch(url, {
             method: "GET",
             headers: {
-                "X-Auth-Token": "d38ac557ec364cf79e21a985e5d1cf8c",
+                "X-Auth-Token": //Här ska nyckeln vara,
             }
         })
         .then(resp => {
